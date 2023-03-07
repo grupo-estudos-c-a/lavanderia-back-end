@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Builder
-@Table(name = "itens_pedido")
+@Table(name = "itens_pedido", schema = "${database.name}")
 @RequiredArgsConstructor
 public class OrderItem {
 

@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 @Builder
-@Table(name = "pedido")
+@Table(name = "pedido", schema = "${database.name}")
 @RequiredArgsConstructor
 public class Order {
 
@@ -23,7 +23,7 @@ public class Order {
 
     @ManyToOne
     @JoinColumn(name = "id_usuario")
-    private Integer userId;
+    private User user;
 
     @Column(name = "valor_pedido", nullable = false)
     private BigDecimal amount;

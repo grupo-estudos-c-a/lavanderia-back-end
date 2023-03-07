@@ -13,7 +13,7 @@ import java.time.LocalTime;
 @Setter
 @Entity
 @Builder
-@Table(name = "roupa")
+@Table(name = "roupa", schema = "${database.name}")
 @RequiredArgsConstructor
 public class Outfit {
 
