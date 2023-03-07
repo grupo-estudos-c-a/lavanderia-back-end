@@ -7,13 +7,12 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Builder
 @Table(name = "pedido", schema = "${database.name}")
-@RequiredArgsConstructor
 public class Order {
 
     @Id
@@ -22,7 +21,7 @@ public class Order {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "id_usuario")
+    @JoinColumn(name = "id_usuario", nullable = false)
     private User user;
 
     @Column(name = "valor_pedido", nullable = false)
@@ -31,7 +30,7 @@ public class Order {
     @Column(name = "data_pedido", nullable = false)
     private LocalDateTime orderDate;
 
-    @Column(name = "data_pagamento", nullable = false)
+    @Column(name = "data_pagamento")
     private LocalDate payDate;
 
     @Column(name = "situacao_pedido", nullable = false)

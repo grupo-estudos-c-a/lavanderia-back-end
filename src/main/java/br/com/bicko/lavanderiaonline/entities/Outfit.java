@@ -1,9 +1,6 @@
 package br.com.bicko.lavanderiaonline.entities;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -11,10 +8,10 @@ import java.time.LocalTime;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Builder
 @Table(name = "roupa", schema = "${database.name}")
-@RequiredArgsConstructor
 public class Outfit {
 
     @Id

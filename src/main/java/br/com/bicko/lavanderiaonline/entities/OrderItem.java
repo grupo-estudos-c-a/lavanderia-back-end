@@ -1,18 +1,15 @@
 package br.com.bicko.lavanderiaonline.entities;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Builder
 @Table(name = "itens_pedido", schema = "${database.name}")
-@RequiredArgsConstructor
 public class OrderItem {
 
     @Id
