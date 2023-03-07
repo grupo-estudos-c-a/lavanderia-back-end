@@ -35,6 +35,6 @@ public class Order {
     private LocalDate payDate;
 
     @Column(name = "situacao_pedido", nullable = false)
-    private String status; //descriptions came from Enum
+    private String status;
     
 }
