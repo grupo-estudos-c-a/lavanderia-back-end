@@ -1,4 +1,4 @@
-package br.com.bicko.lavanderiaonline.entities;
+package br.com.bicko.lavanderiaonline.persistence.domain;
 
 import lombok.*;
 

@@ -1,4 +1,4 @@
-package br.com.bicko.lavanderiaonline.entities;
+package br.com.bicko.lavanderiaonline.persistence.domain;
 
 import lombok.*;
 
@@ -27,13 +27,13 @@ public class User {
     private String password;
 
     @Column(name = "nome_usuario", nullable = false)
-    private String nameUser;
+    private String userName;
 
-    @Column(name = "cep_usuario", nullable = false)
-    private String postalCode;
+    @Column(name = "descricao_endereco", nullable = false)
+    private String addressDescription;
 
-    @Column(name = "numero_endereco", nullable = false)
-    private String addressNumber;
+    @Column(name = "complemento_endereco", nullable = false)
+    private String addressComplement;
 
     @Column(name = "telefone_usuario", nullable = false)
     private String phoneNumber;
