@@ -1,6 +1,7 @@
-package br.com.bicko.lavanderiaonline.application.services;
+package br.com.bicko.lavanderiaonline.services;
 
-import br.com.bicko.lavanderiaonline.entities.User;
+import br.com.bicko.lavanderiaonline.persistence.domain.User;
+import br.com.bicko.lavanderiaonline.persistence.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
