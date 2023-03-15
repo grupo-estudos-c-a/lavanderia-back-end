@@ -28,13 +28,6 @@ public class User {
 
     @Column(name = "nome_usuario", nullable = false)
     private String userName;
-
-    @Column(name = "descricao_endereco", nullable = false)
-    private String addressDescription;
-
-    @Column(name = "complemento_endereco", nullable = false)
-    private String addressComplement;
-
     @Column(name = "telefone_usuario", nullable = false)
     private String phoneNumber;
 
@@ -43,5 +36,7 @@ public class User {
 
     @Column(name = "is_funcionario", nullable = false)
     private Boolean isEmployee;
-
+    @OneToOne
+    @JoinColumn(name = "id_endereco", nullable = false)
+    private Address address;
 }
