@@ -17,7 +17,7 @@ public class User {
     @Column(name = "id_usuario", nullable = false)
     private Integer id;
 
-    @JoinColumn(name = "cpf_usuario")
+    @JoinColumn(name = "cpf_usuario", nullable = false)
     private String CPF;
 
     @Column(name = "login_usuario", nullable = false)
